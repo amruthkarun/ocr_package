@@ -78,10 +78,6 @@ servedocs: docs ## compile the docs watching for changes
 release: ## package and upload a release
 	twine upload dist/*
 
-version:clean  ## git push package version to github
-	git status
-	git push
-
 dist: clean ## builds source and wheel package
 	bump2version patch
 	python3.9 setup.py sdist
