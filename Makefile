@@ -79,7 +79,7 @@ release: ## package and upload a release
 	twine upload dist/*
 
 dist: clean ## builds source and wheel package
-	bump2version patch
+	python3 -m bump2version patch
 	python3 setup.py sdist
 	python3 setup.py bdist_wheel
 	ls -l dist
