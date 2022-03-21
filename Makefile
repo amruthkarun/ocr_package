@@ -58,10 +58,10 @@ test: ## run tests quickly with the default Python
 test-all: ## run tests on every python3.9 version with tox
 	tox
 
-coverage: ## check code coverage quickly with the default Python
+coverage: ## check code coverage quickly with Python
 	python3 -m coverage run --source ocr_package setup.py test
 	python3 -m coverage report -m
-	coverage html
+	python3 -m coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
