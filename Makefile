@@ -53,7 +53,7 @@ lint/flake8: ## check style with flake8
 lint: lint/flake8 ## check style
 
 test: ## run tests quickly with the default Python
-	python3.9 setup.py test
+	python3 setup.py test
 
 test-all: ## run tests on every python3.9 version with tox
 	tox
@@ -80,9 +80,9 @@ release: ## package and upload a release
 
 dist: clean ## builds source and wheel package
 	bump2version patch
-	python3.9 setup.py sdist
-	python3.9 setup.py bdist_wheel
+	python3 setup.py sdist
+	python3 setup.py bdist_wheel
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
-	python3.9 setup.py install
+	python3 setup.py install
