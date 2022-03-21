@@ -59,8 +59,8 @@ test-all: ## run tests on every python3.9 version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source ocr_package setup.py test
-	coverage report -m
+	python3 -m coverage run --source ocr_package setup.py test
+	python3 -m coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
